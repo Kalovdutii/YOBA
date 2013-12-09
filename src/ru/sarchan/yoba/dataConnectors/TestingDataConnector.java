@@ -4,6 +4,9 @@
  */
 package ru.sarchan.yoba.dataConnectors;
 
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
 import ru.sarchan.yoba.entity.Visitor;
 
 /**
@@ -13,7 +16,9 @@ import ru.sarchan.yoba.entity.Visitor;
 public class TestingDataConnector implements DataConnectable{
 
     @Override
-    public Visitor getData() {
-        
+    public ArrayList<Visitor> getData() {
+        ArrayList a = new ArrayList();
+        a.add(new Visitor(new Time(52200),new Time(54000), 0));
+        return a;
     }
 }
